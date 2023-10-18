@@ -48,12 +48,39 @@
       padding: 2rem;
       background-color: rgb(32, 45, 48, 0.5);
     }
+    ol {
+      font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; 
+    }
     ol > li, ol > ul {
       margin-bottom: 0.75rem;
     }
     em {
       font-style: normal;
       color: aquamarine;
+    }
+    .tip {
+      position: relative;
+      border-bottom: 1px dashed aquamarine;
+    }
+    .tip:before {
+      content: attr(data-text);
+      position:absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      margin-top: 1rem;
+      width: 80%;
+      max-width: 35ch;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: .3s opacity; 
+    }
+    .tip:hover:after {
+      opacity:1;
     }
   </style>
 </head>
@@ -65,7 +92,7 @@
     <ol>
       <li><em>I will prioritize player enjoyment over pedantry.</em> I am not a stickler for the rules, and I will typically allow ad hoc or awesome things to happen as long as it doesn't break the game. Games should be fun.</li>
       <li><em>I will not favour any one player (or character) over others.</em> It is expected that certain events and outcomes will affect some or all players (and characters) differently. However, all players should have an equal chance to have fun and be awesome. So, if your awesome idea is detrimental to another player, it may need to be tempered.</li>
-      <li><em>I will honour anyone's lines and veils.</em> If there is potential content you would prefer I avoid entirely or in detail, I will. If I don't ask, please do reach out anytime, even if things change throughout.</li>
+      <li><em>I will honour anyone's <span class="tip" data-text="A line is something which will never come up as part of a campaign or session, while a veil ensures that whilst an action or event might take place, this will happen ‘off-screen’: mentioned in passing, but not dwelled on in detail and not a significant part of any plot or encounter.">lines and veils</span>.</em> If there is potential content you would prefer I avoid entirely or in detail, I will. If I don't ask, please do reach out anytime, even if things change throughout.</li>
       <li><em>There are certain things I won't have directly in my games.</em> This list is not necessarily exhaustive but currently includes:</li>
       <ul>
         <li>Slavery, subjugation, or other involuntary servitude.</li>
